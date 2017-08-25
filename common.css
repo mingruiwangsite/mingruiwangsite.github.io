@@ -8,10 +8,16 @@
     font-size: 1rem;
     text-align: center;
 
-
 }
 
-#footer a:link {color: lightgrey;}
+#footer a:link {
+    color: lightgrey;
+}
+
 #footer a:visited {
     color: lightgrey;
+}
+
+.tool h1 {
+    color: green;
 }
