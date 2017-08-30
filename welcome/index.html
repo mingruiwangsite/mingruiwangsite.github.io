@@ -15,17 +15,28 @@
             background-attachment: fixed;
             background-size: cover;
             background-color: #8da80f;
+            min-font-size:10px;
+
         }
 
         #content {
+
             position: absolute;
-            font-size: 1.5vw;
-            min-font-size:16px;
+            top: 2vh;
+            margin-left: 10vw;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            width: 66vw;
             text-align: left;
-            margin-top: auto;
-            margin-left: 10%;
-            width: 66%;
             color: white;
+        }
+
+
+        @media (min-width: 700px){
+            #content {
+                font-size: 1.44vw;
+            }
         }
 
         #wmr-portrait {
@@ -38,19 +49,14 @@
 
         }
 
-        @media (min-width: 550px) {
+        @media (min-aspect-ratio: 16/12) {
 
             #portrait {
                 float: right;
             }
         }
 
-        @media (max-width: 550px) {
 
-            h1 {
-                color: green;
-            }
-        }
 
 
     </style>
