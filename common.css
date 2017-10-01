@@ -1,5 +1,5 @@
 #footer {
-    position: static;
+    position: sticky;
     bottom: 5vh;
     margin-left: auto;
     margin-right: auto;
