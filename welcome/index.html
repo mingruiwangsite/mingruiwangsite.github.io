@@ -8,14 +8,24 @@
 
     <style>
 
+
         body {
-            background-image: url(lotus-pond.jpg);
-            background-position: center center;
-            background-attachment: fixed;
-            background-size: cover;
+
             background-color: #8da80f;
+
+            background: url(lotus-pond.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            min-height: 100%;
+
         }
-        
+
+        html {
+            height: 100vh;
+            min-height: 100%;
+        }
         #portrait {
             margin-left: auto;
             margin-right: auto;
