@@ -13,7 +13,6 @@
 
         .show {
             line-height: 120%;
-            font-size: 120%;
         }
 
         @media not print {
@@ -40,7 +39,6 @@
             font-size: 140%;
             padding-bottom: 0.2cm;
             padding-top: 0.4cm;
-            font-family: "Times New Roman", 宋体;
         }
 
         .title {
@@ -48,20 +46,10 @@
             padding-bottom: 0.2cm;
             padding-top: 0.4cm;
             text-align: center;
-            font-family: "Times New Roman", 黑体;
         }
 
-        .answers .fill_in {
+        .anwsers .fill_in {
             text-decoration: underline;
-            font-family: Consolas, 楷体;
-        }
-
-        .answers {
-            font-family: Consolas, 等线;
-        }
-
-        .blank_fill_in {
-            font-family: Consolas, 等线;
         }
 
         .note {
@@ -106,6 +94,7 @@
         }
 
         function show(type) {
+            customize_style();
             content = document.getElementById("text").value;
             content = content.replace(/(.+)/gi, "<div>$1</div>");
             content = content.replace(/\<div\>\#(.+)\<\/div\>/gi, "<li>$1<\/li>");
@@ -123,6 +112,7 @@
         }
 
         function question(space) {
+            customize_style();
             content = document.getElementById("text").value;
 
             if (space == true) {
@@ -177,10 +167,14 @@ $生物物种是怎样命名的？
 #后面还可以加上[定名者的名字]，[正体]表示
 
 </textarea><br/>
-        <input type="button" value="答案" xml:lang="zh-cn" onclick="show('answers')"/>
+        <input type="button" value="答案" xml:lang="zh-cn" onclick="show('anwsers')"/>
         <input type="button" value="填空" xml:lang="zh-cn" onclick="show('blank_fill_in')"/>
         <input type="button" value="问题" xml:lang="zh-cn" onclick="question(true)"/>
         <input type="button" value="问题列表" xml:lang="zh-cn" onclick="question(false)"/>
+        <input type="input" value="楷体" id="custom_fontFamily" xml:lang="zh-cn" onkeyup="customize_style()"
+               onchange="customize_style()"/>
+        <input type="input" value="120%" id="custom_fontSize" xml:lang="zh-cn" onkeyup="customize_style()"
+               onchange="customize_style()"/>
 
     </div>
 </div>
